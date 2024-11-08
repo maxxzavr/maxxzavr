@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Тест по теме: {{ theme }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
     <section class="test-container">
@@ -11,7 +11,7 @@
         <form method="POST">
             {% for word in words %}
                 <div class="question-block">
-                    <h3><span>{{ word.word }}</span></h3>  <!-- Слово для перевода выделено -->
+                    <h3><span>{{ word.word }}</span></h3>
                     <ul>
                         {% for option in word.options %}
                             <li>
